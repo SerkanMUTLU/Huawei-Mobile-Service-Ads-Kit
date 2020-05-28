@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AddDemo</string>
+
+    <string name="txt_enter_number">Enter Number</string>
+    <string name="txt_chance">Total Chance : </string>
+    <string name="reward_ad_id">testx9dtjwj8hp</string>
+</resources>

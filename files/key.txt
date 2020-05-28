@@ -1,0 +1,31 @@
+Keystore type: jks
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: huawei
+Creation date: 08.Nis.2020
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=huawei, OU=huawei, O=huawei, L=Istanbul, ST=Umraniye, C=TR
+Issuer: CN=huawei, OU=huawei, O=huawei, L=Istanbul, ST=Umraniye, C=TR
+Serial number: 5885d996
+Valid from: Wed Apr 08 12:57:04 EET 2020 until: Sun Apr 02 12:57:04 EET 2045
+Certificate fingerprints:
+         MD5:  85:5E:FB:74:94:B6:D1:66:9B:86:9A:71:1C:59:52:B6
+         SHA1: 21:F8:F9:15:6F:48:B8:45:5C:3B:A7:9B:5A:71:06:3B:10:F1:50:1B
+         SHA256: 7A:F2:7E:02:EE:EE:D3:53:20:35:BF:CD:B1:6B:51:74:E2:9F:F6:48:B3:AD:A9:58:86:9E:70:BD:2F:1F:A0:AC
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 44 ED 08 10 0D 49 B1 E9   95 12 64 CB BA DA A6 56  D....I....d....V
+0010: 6B BD 08 B7                                        k...
+]
+]
