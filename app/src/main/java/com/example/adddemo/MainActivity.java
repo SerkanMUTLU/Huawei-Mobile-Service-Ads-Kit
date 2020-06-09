@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
     private int maxNumber=100;
     private RewardAd rewardAd;
 
-    private String adID ="testw6vs28auh3";
+    private static String adID ="testw6vs28auh3";
+    private static String reward_ad_id ="testx9dtjwj8hp";
     private ConstraintLayout constLytBanner;
 
     @Override
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
 
         randomNumber = generateRandomNumber();
         showAllChance();
-        Toast.makeText(getApplicationContext(),"Random Number is "+randomNumber,Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Random Number is : "+randomNumber,Toast.LENGTH_LONG).show();
         HwAds.init(this);
 
         //Set Bottom Banner
@@ -53,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
         loadRewardAd();
 
     }
-
     private void setBannerAd(){
         BannerView bottomBanner = new BannerView(this);
         AdParam adParam = new AdParam.Builder().build();
@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
         bottomBanner.loadAd(adParam);
         constLytBanner.addView(bottomBanner);
     }
-
 
     public void setTotalChance(int chance){
         this.totalChance = chance;
@@ -78,14 +77,14 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
 
     private void loadRewardAd(){
         if(rewardAd == null){
-            rewardAd = new RewardAd(MainActivity.this,getString(R.string.reward_ad_id));
+            rewardAd = new RewardAd(MainActivity.this,reward_ad_id);//set ad slot id
         }
 
         RewardAdLoadListener rewardAdLoadListener = new RewardAdLoadListener(){
             @Override
-            public void onRewardAdFailedToLoad(int i) {
+            public void onRewardAdFailedToLoad(int errorCode) {
                 //i returns error code
-                Log.e("ERROR",""+i);
+                Log.e("ERROR",""+errorCode);
             }
 
             @Override
@@ -122,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
                     reward = new Reward() {
                         @Override
                         public String getName() {
-                            return "Extra playing Change ";//My reword name
+                            return "Extra playing chance ";//My reword name
                         }
 
                         @Override
@@ -172,11 +171,11 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
             else{
                 //Tutlan sayı ve tahmin eşitse yeni bir sayı üret
                 if(String.valueOf(randomNumber).equals(String.valueOf(enteredNumber))){
-                    Toast.makeText(getApplicationContext(),"Doğru",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Correct ! ",Toast.LENGTH_SHORT).show();
                     showAllChance();
 
                     randomNumber=generateRandomNumber();//şifre doğruysa yeni numara üret
-                    Toast.makeText(getApplicationContext(),"New random number"+randomNumber,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"New random number : "+randomNumber,Toast.LENGTH_SHORT).show();
                 }
                 else{//Eşit değilse candan 1 düşür
 
@@ -184,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
                     setTotalChance(totalChance);
                     showAllChance();
 
-                    Toast.makeText(getApplicationContext(),"Yanlış sayi ipucu("+randomNumber+")",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Incorrect prediction ("+randomNumber+")",Toast.LENGTH_LONG).show();
                 }
             }
         }
