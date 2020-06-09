@@ -3,5 +3,12 @@
 
     <string name="txt_enter_number">Enter Number</string>
     <string name="txt_chance">Total Chance : </string>
-    <string name="reward_ad_id">testx9dtjwj8hp</string>
+
+
+    <string name="owner">HUAWEI Developer</string>
+    <string name="copyright_info">Copyright 2020. Huawei Technologies Co., Ltd</string>
+    <string name="status_load_ad_success">Ad loading state: loaded successfully.</string>
+    <string name="status_load_ad_fail">Ad loading state: failed to be loaded. Error code: </string>
+    <string name="status_ad_dismissed">Ad is dismissed.</string>
+
 </resources>
