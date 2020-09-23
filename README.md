@@ -1,7 +1,7 @@
 # Huawei-Mobile-Service-Ads-Kit
 HMS Ads kit example
 
-Project was created to show Huawei Ads kit.It includes just HMS Ads kit kods and some logic for basic app.
+Project was created to show Huawei Ads kit.It includes just HMS Ads kit codes and some logic for basic app.
 
 App consist of three parts 
 -First Activity shows us Splash Ads 
